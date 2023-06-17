@@ -1,0 +1,33 @@
+<video autoplay playsinline style="pointer-events: none;">
+    <source src="/assets/webcam.mp4" type="video/mp4"  codecs="avc1.42E01E, mp4a.40.2">
+    Your browser doesn't support HTML5 video tag.
+</video>
+
+<p-table [value]="cams" [tableStyle]="{ 'min-width': '50rem' }">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Location</th>
+            <th>Type</th>
+            <th>Preview</th>
+            <th>Status</th>
+            <th></th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-product>
+        <tr>
+            <td>{{ product.streetName }}</td>
+            <td>{{ product.type }}</td>
+            <td>
+                <p-overlayPanel #op>
+                    <video autoplay playsinline style="pointer-events: none;">
+                        <source src="/assets/webcam.mp4" type="video/mp4"  codecs="avc1.42E01E, mp4a.40.2">
+                    </video>
+                </p-overlayPanel>
+                <i class="pi pi-video" (click)="op.toggle($event)">  </i></td>
+            <td>{{ product.status }}</td>
+            <td><button pButton pRipple label="Add to map" class="p-button-success"></button></td>
+        </tr>
+    </ng-template>
+</p-table>
+
+<div id="map"></div>
