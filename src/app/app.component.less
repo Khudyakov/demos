@@ -1,9 +1,48 @@
 :host {
+  display: flex;
+  align-items:center;
+  flex-direction: row;
+  flex: 1 1;
+
+  .map-container {
+    width:100%;
+    text-align:center;
+  }
   #map {
-    height: 360px;
+    height: 560px;
   }
 
   .pi-video {
     cursor:pointer;
+  }
+
+  .td-button {
+    min-width:160px;
+    text-align:center;
+  }
+
+  .title {
+    font-size: 8rem;
+    line-height: 1;
+    text-transform:uppercase;
+    font-family: Source Sans Pro,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+    color: transparent;
+    animation: 30s cubic-bezier(0.3, 0, 0.7, 1) 0s infinite normal none running bg-animation;
+    background: url("/assets/hero.87951c00.jpg");
+    background-clip:text;
+    vertical-align:top;
+  }
+
+  @keyframes bg-animation {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 100% 100%;
+    }
+
+    100% {
+      background-position: 0 0;
+    }
   }
 }
