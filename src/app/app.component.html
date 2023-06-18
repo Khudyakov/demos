@@ -15,11 +15,11 @@
             <td>{{ camera.capacity }}</td>
             <td>
                 <video *ngIf="!camera.disabled" autoplay playsinline width="320" height="240" loop muted>
-                    <source [src]="'assets/' + camera.videoRaw" type="video/mp4"  codecs="avc1.42E01E, mp4a.40.2">
+                    <source [src]="'demos/assets/' + camera.videoRaw" type="video/mp4"  codecs="avc1.42E01E, mp4a.40.2">
                 </video>
 
                 <video #vid [hidden]="!camera.disabled" autoplay playsinline width="320" height="240" loop muted>
-                    <source [src]="'assets/' + camera.videoProcessed" type="video/mp4"  codecs="avc1.42E01E, mp4a.40.2">
+                    <source [src]="'demos/assets/' + camera.videoProcessed" type="video/mp4"  codecs="avc1.42E01E, mp4a.40.2">
                 </video>
                </td>
             <td>{{ camera.occupied }}</td>

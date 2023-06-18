@@ -23,7 +23,7 @@ import {APP_BASE_HREF} from '@angular/common';
   ],
   providers: [
     {provide: '$window', useValue: window},
-    {provide: APP_BASE_HREF, useValue: '/docs'}
+    {provide: APP_BASE_HREF, useValue: '/demos'}
       ],
   bootstrap: [AppComponent]
 })
