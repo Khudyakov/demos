@@ -7,7 +7,7 @@ import { TableModule } from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
 import { OverlayPanelModule } from 'primeng/overlaypanel';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-
+import {APP_BASE_HREF} from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -22,7 +22,8 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
     OverlayPanelModule
   ],
   providers: [
-    {provide: '$window', useValue: window}
+    {provide: '$window', useValue: window},
+    {provide: APP_BASE_HREF, useValue: '/docs'}
       ],
   bootstrap: [AppComponent]
 })
